@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/loremipsumgenerator",
+  "version": "1.0.0",
+  "description": "Lorem Ipsum Generator is a simple tool for generating lorem ipsum text. It returns the generated text.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/loremipsumgenerator-API.git"
+  },
+  "keywords": [
+    "lorem ipsum"," lorem ipsum generator"," lorem ipsum api"," lorem ipsum tool"," lorem ipsum software"," lorem ipsum service"," lorem ipsum library"," lorem ipsum sdk"," lorem ipsum code"," lorem ipsum script"," lorem ipsum program"," lorem ipsum application"," lorem ipsum app"," lorem ipsum utility"," lorem ipsum helper"," lorem ipsum helper tool"," lorem ipsum helper software"," lorem ipsum helper service"," lorem ipsum helper library"," lorem ipsum helper sdk"," lorem ipsum helper code"," lorem ipsum helper script"," lorem ipsum helper program"," lorem ipsum helper application"," lorem ipsum helper app"," lorem ipsum helper tool"," lorem ipsum helper utility"," lorem ipsum helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/loremipsumgenerator-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/loremipsumgenerator-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
