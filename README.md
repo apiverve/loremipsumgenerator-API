@@ -48,8 +48,9 @@ Using the API client, you can perform requests to the API.
 
 ```
 var query = {
-  sentences: 3,
-  words: 150
+  paragraphs: 3,
+  startwithlorem: true,
+  maxlength: 100
 };
 ```
 
@@ -72,9 +73,9 @@ api.execute(query, function (error, data) {
   "status": "ok",
   "error": null,
   "data": {
-    "words": 150,
-    "sentences": 0,
-    "text": "deserunt aliquip duis pariatur nostrud cupidatat esse occaecat ea proident proident nulla labore eiusmod ut qui enim deserunt eu sunt ea ipsum et ullamco consequat ea laboris ea Lorem elit quis magna nulla mollit occaecat adipisicing aliqua reprehenderit nostrud laboris dolor magna sint ullamco Lorem eu commodo amet velit Lorem fugiat sunt Lorem culpa sit tempor laboris consectetur commodo et ipsum velit proident proident nostrud culpa irure consectetur non est minim commodo ullamco pariatur cupidatat exercitation ullamco in elit aliqua quis eiusmod tempor et nisi reprehenderit commodo duis consectetur excepteur occaecat labore ut mollit ipsum quis dolore est mollit mollit eiusmod id aliqua velit consectetur velit aliquip Lorem consequat et ad magna consectetur ad voluptate sunt dolore laboris mollit labore eu veniam non nostrud nostrud qui ex ad et aliquip ullamco ad consequat est velit non sunt ullamco non laborum aute fugiat cillum velit fugiat elit irure velit ex dolore"
+    "words": 72,
+    "sentences": 8,
+    "text": "Lorem ipsum dolor sit amet exercitation ipsum duis duis ex do do ullamco magna. Nisi fugiat eiusmod excepteur veniam amet. Sint sint pariatur anim eu commodo tempor magna dolor duis nisi. Pariatur nisi ex duis aliqua consequat id laborum officia. Dolor consequat qui proident do ex sint eu. Tempor ut consequat anim veniam culpa sunt labore aute. Qui velit consectetur qui quis sit do irure ex culpa. Laboris sunt laboris sint amet."
   }
 }
 ```
