@@ -1,5 +1,4 @@
-Lorem Ipsum Generator API
-============
+# Lorem Ipsum Generator API
 
 Lorem Ipsum Generator is a simple tool for generating lorem ipsum text. It returns the generated text.
 
@@ -7,56 +6,64 @@ Lorem Ipsum Generator is a simple tool for generating lorem ipsum text. It retur
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Lorem Ipsum Generator API](https://apiverve.com/marketplace/api/loremipsumgenerator)
+This is a Javascript Wrapper for the [Lorem Ipsum Generator API](https://apiverve.com/marketplace/loremipsumgenerator)
 
 ---
 
 ## Installation
-	npm install @apiverve/loremipsumgenerator --save
+
+Using npm:
+```shell
+npm install @apiverve/loremipsumgenerator
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/loremipsumgenerator
+```
 
 ---
 
 ## Configuration
 
-Before using the loremipsumgenerator API client, you have to setup your account and obtain your API Key.  
+Before using the Lorem Ipsum Generator API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Lorem Ipsum Generator API documentation is found here: [https://docs.apiverve.com/api/loremipsumgenerator](https://docs.apiverve.com/api/loremipsumgenerator).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Lorem Ipsum Generator API documentation is found here: [https://docs.apiverve.com/ref/loremipsumgenerator](https://docs.apiverve.com/ref/loremipsumgenerator).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var loremipsumgeneratorAPI = require('@apiverve/loremipsumgenerator');
-var api = new loremipsumgeneratorAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const loremipsumgeneratorAPI = require('@apiverve/loremipsumgenerator');
+const api = new loremipsumgeneratorAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   paragraphs: 3,
   startwithlorem: true,
   maxlength: 100
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -66,9 +73,56 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  paragraphs: 3,
+  startwithlorem: true,
+  maxlength: 100
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  paragraphs: 3,
+  startwithlorem: true,
+  maxlength: 100
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -76,8 +130,7 @@ api.execute(query, function (error, data) {
     "words": 62,
     "sentences": 5,
     "text": "Lorem ipsum dolor sit amet nulla sint eiusmod ut nulla et reprehenderit quis laborum do. Duis irure consequat ut consequat nisi non velit dolore culpa nulla. Sunt deserunt dolore culpa ex qui non laboris cillum sint labore non amet aliqua reprehenderit. Nisi culpa ea magna ea ex id. Consectetur eiusmod voluptate aliquip eu dolor anim consequat amet non deserunt enim velit incididunt."
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -90,6 +143,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
